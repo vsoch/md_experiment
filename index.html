@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Design Experiment</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.blue-red.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #next_button {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    .mdl-radio__label {
+      padding-right:20px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="experiment-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <div class="experiment-ribbon"></div>
+      <main class="experiment-main mdl-layout__content">
+        <div class="experiment-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="experiment-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <h3>The Experiment Name</h3>
+
+              <p>When I go to the park I like to play on the following:</p>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+		  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+		  <span class="mdl-radio__label">Trees</span>
+		</label>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+		  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+		  <span class="mdl-radio__label">Playground</span>
+		</label>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+		  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+		  <span class="mdl-radio__label">Mom</span>
+		</label>
+		<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+		  <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="4">
+		  <span class="mdl-radio__label">Words</span>
+		</label><br><br><br>
+
+              <p>I enjoy the following</p>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+		  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+		  <span class="mdl-checkbox__label">Pizza</span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+		  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+		  <span class="mdl-checkbox__label">Ninja Turtles</span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+		  <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input">
+		  <span class="mdl-checkbox__label">Darth Vader</span>
+		</label>
+		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+		  <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
+		  <span class="mdl-checkbox__label">Thinking</span>
+		</label><br><br><br>
+
+              <p>Tell us about yourself:</p>
+		<form action="#">
+		  <div class="mdl-textfield mdl-js-textfield">
+		    <input class="mdl-textfield__input" type="text" id="sample1">
+		    <label class="mdl-textfield__label" for="sample1">What is your name?</label>
+		  </div>
+		</form>
+
+		<form action="#">
+		  <div class="mdl-textfield mdl-js-textfield">
+		    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+		    <label class="mdl-textfield__label" for="sample2">How old are you?</label>
+		    <span class="mdl-textfield__error">Input is not a number!</span>
+		  </div>
+		</form><br><br>
+
+              <p>Select the items that you would purchase:</p>
+		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+		  <thead>
+		    <tr>
+		      <th class="mdl-data-table__cell--non-numeric">Item</th>
+		      <th>Quantity</th>
+		      <th>Unit price</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">Crayola Markers</td>
+		      <td>12</td>
+		      <td>$4.98</td>
+		    </tr>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">Colored Pencils</td>
+		      <td>10</td>
+		      <td>$3.25</td>
+		    </tr>
+		    <tr>
+		      <td class="mdl-data-table__cell--non-numeric">Crayons</td>
+		      <td>50</td>
+		      <td>$6.99</td>
+		    </tr>
+		  </tbody>
+		</table><br><br><br>
+
+              <p>Write about what you did yesterday:</p>
+		<form action="#">
+		  <div class="mdl-textfield mdl-js-textfield">
+		    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+		    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+		  </div>
+		</form>
+
+          </div>
+        </div>
+      </main>
+    </div>
+    <a href="#" target="_blank" id="next_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Next</a>
+    <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+  </body>
+</html>
